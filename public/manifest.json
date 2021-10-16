@@ -1,0 +1,20 @@
+{
+  "short_name": "reacrud",
+  "name": "Reacrud",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x150",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "920x540"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
