@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const Tabel = ({ total }) => {
+const Tabel = ({ total, editData, deleteData }) => {
   return (
     <div>
       <Table striped bordered hover>
@@ -17,11 +17,19 @@ const Tabel = ({ total }) => {
         <tbody>
           {total.map((totals, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{totals.title}</td>
                 <td>{totals.description}</td>
                 <td>{totals.username}</td>
+                <td>
+                  <button className="btn btn-warning me-2" onClick={() => editData(totals.id)}>
+                    Edit
+                  </button>
+                  <button className="btn btn-danger" onClick={() => deleteData(totals.id)}>
+                    Delete
+                  </button>
+                </td>
               </tr>
             );
           })}
